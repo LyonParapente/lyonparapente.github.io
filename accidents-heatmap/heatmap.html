@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Heatmap des accidents</title>
+	<link rel="stylesheet" href="leaflet/leaflet.css" />
+<style type="text/css">
+body {
+	margin: 0;
+}
+#map {
+	width: 100vw;
+	height: 100vh;
+}
+#filters {
+	background-color: white;
+	border-radius: 5px;
+	padding: 5px;
+	opacity: 0.8
+}
+</style>
+</head>
+<body>
+	<div id="map"></div>
+	<div id="filters">
+		Catégorie :<br />
+		<label><input type="checkbox" id="filter-glider-a" name="EN-A" checked /> EN-A</label><br />
+		<label><input type="checkbox" id="filter-glider-b" name="EN-B" checked /> EN-B</label><br />
+		<label><input type="checkbox" id="filter-glider-c" name="EN-C" checked /> EN-C</label><br />
+		<label><input type="checkbox" id="filter-glider-d" name="EN-D" checked /> EN-D</label><br />
+		<label><input type="checkbox" id="filter-glider-ccc" name="CCC" checked /> CCC</label><br />
+		<hr />
+		Blessures :<br />
+		<label><input type="checkbox" id="filter-blessures-indemne" checked /> Indemne</label><br />
+		<label><input type="checkbox" id="filter-blessures-legeres" checked /> Légères</label><br />
+		<label><input type="checkbox" id="filter-blessures-graves" checked /> Graves</label><br />
+		<label><input type="checkbox" id="filter-blessures-deces" checked /> Décès</label><br />
+		<hr />
+		Horaire :<br />
+		<label><input type="checkbox" id="filter-horaire-matin" checked /> Matin</label><br />
+		<label><input type="checkbox" id="filter-horaire-midi" checked /> Midi</label> (11-15h)<br />
+		<label><input type="checkbox" id="filter-horaire-apresmidi" checked /> Après-Midi</label><br />
+	</div>
+
+	<script src="heatmap-js/heatmap.min.js"></script>
+	<script src="leaflet/leaflet.js"></script>
+	<script src="leaflet/leaflet-heatmap.js"></script>
+	<script src="accidents_minimal.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
